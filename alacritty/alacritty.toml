@@ -1,0 +1,61 @@
+[window]
+
+padding.x = 5
+padding.y = 5
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
+
+[font]
+size = 12.0
+
+# This is the font size we use for screencasting
+# size = 40
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[colors.primary]
+foreground = "#a0d1d2"
+background = "#05080e"
+
+[colors.selection]
+text = "#000000"
+background = "#c1ddff"
+
+[colors.cursor]
+text = "#fffeff"
+cursor = "#c7c7c7"
+
+[colors.normal]
+black = "#000000"
+red = "#b83019"
+green = "#51bf37"
+yellow = "#c6c43e"
+blue = "#5ac4be"
+magenta = "#b93ec1"
+cyan = "#53c2c5"
+white = "#c7c7c7"
+
+[colors.bright]
+black = "#686768"
+red = "#ef766d"
+green = "#8cf67a"
+yellow = "#fefb7e"
+blue = "#6970f6"
+magenta = "#f07ef8"
+cyan = "#8ef9fd"
+white = "#fffeff"
