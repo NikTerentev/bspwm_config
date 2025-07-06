@@ -13,6 +13,11 @@
 (package! tao-theme)
 (package! tron-legacy-theme)
 (package! python-pytest)
+(package! chess)
+(package! org-bullets)
+(package! counsel-projectile)
+(package! all-the-icons-ivy-rich)
+(package! ivy-rich)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:

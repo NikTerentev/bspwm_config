@@ -30,6 +30,29 @@
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :weight 'normal :size 17))
 
+;; Установка fill-column и включение индикатора для Python
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq fill-column 79)
+            (display-fill-column-indicator-mode 1)))  ; Вертикальная линия
+
+(add-hook 'org-mode-hook 'org-bullets-mode)
+
+(use-package all-the-icons-ivy-rich
+  :ensure t
+  :init (all-the-icons-ivy-rich-mode 1))
+
+(use-package ivy-rich
+  :ensure t
+  :init (ivy-rich-mode 1))
+
+;; Whether display the icons
+(setq all-the-icons-ivy-rich-icon t)
+
+;; Whether display the colorful icons.
+;; It respects `all-the-icons-color-icons'.
+(setq all-the-icons-ivy-rich-color-icon t)
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -76,7 +99,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
 ;; basedpyright
 (setq lsp-pyright-langserver-command "basedpyright")
 
@@ -85,3 +107,10 @@
 (add-hook 'python-mode-hook #'flymake-ruff-load)
 
 (setq-default evil-escape-key-sequence "jk")
+
+(add-to-list 'display-buffer-alist
+  '((derived-mode . flycheck-error-list-mode)
+     (display-buffer-reuse-window display-buffer-below-selected)
+     (window-height . 0.3)
+     (dedicated . t)
+     (preserve-size . (t . t))))
